@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import BottomNavigationModal from "./components/BottomNavigationModal";
 import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
 import TransformationalFeatures from "./components/Features";
-
+import "primereact/resources/themes/lara-light-cyan/theme.css";
 function App() {
   useEffect(() => {
     console.log("App Render");

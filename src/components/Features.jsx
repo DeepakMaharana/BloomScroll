@@ -10,7 +10,7 @@ const FeatureCard = ({ title, description, index }) => (
     className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow duration-300"
   >
     <motion.h3 
-      className="text-xl font-semibold text-pink-500 mb-4"
+      className="text-xl font-semibold text-blue-950 mb-4"
       whileHover={{ scale: 1.02 }}
     >
       {title}
@@ -51,7 +51,7 @@ const TransformationalFeatures = () => (
     <motion.h1 
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
-      className="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text"
+      className="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-blue-900 to-purple-400 text-transparent bg-clip-text"
     >
       TRANSFORMATIONAL FEATURES
     </motion.h1>

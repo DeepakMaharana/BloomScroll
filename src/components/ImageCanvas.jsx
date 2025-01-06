@@ -72,12 +72,15 @@ const ImageCanvas = () => {
       scrollTrigger: {
         trigger: ".parent",
         scroller: ".content",
-        // pin: true, // Pin the section while animating
-        // anticipatePin: 1, // Improves pin performance
+        pin: true, // Pin the section while animating
+        anticipatePin: 1, // Improves pin performance
         start: "top top",
         end: "bottom top",
-        scrub: true,
-        // markers: true,
+        scrub: 1,
+        onComplete: (self) => {
+          console.log("Timeline completed");
+          self.kill(); // Removes the ScrollTrigger instance and its markers
+        },
       },
     })
 
@@ -169,8 +172,8 @@ const ImageCanvas = () => {
         render(Math.round(index.value));
       },
     },"third")
-    .to(".parent canvas_div", {
-      x:-150,
+    .from(".parent canvas_div", {
+      xPercent:0,
       duration:30,
       ease:"linear"
     }, "third")

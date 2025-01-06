@@ -70,7 +70,6 @@ const SplashScreen = () => {
       quotes,
       { opacity: 0 },
       {
-        delay: 0.5,
         opacity: 0.8,
         duration: 1,
         stagger: 0.2,
@@ -96,7 +95,7 @@ const SplashScreen = () => {
 
   return (
     <div
-      className="flex flex-col justify-center items-center w-full h-full splash-container absolute top-0 left-0 z-20"
+      className="flex flex-col justify-center items-center w-full h-full splash-container absolute top-0 left-0 z-30"
       style={{
         background:
           "linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #312E81 100%)",

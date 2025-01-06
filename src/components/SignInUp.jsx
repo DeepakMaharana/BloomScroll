@@ -119,7 +119,7 @@ function SignInUp() {
           )}
           <button
             type="submit"
-            className="w-full bg-purpel-500 hover:bg-purpel-700 text-white font-bold py-2 px-4 rounded"
+            className="w-full bg-purple-500 hover:bg-purpel-700 text-white font-bold py-2 px-4 rounded"
           >
             {isSignUp ? 'Sign Up' : 'Sign In'}
           </button>
@@ -129,7 +129,7 @@ function SignInUp() {
             <p className='text-black'>
               Already have an account?{' '}
               <span
-                className="text-purpel-500 cursor-pointer"
+                className="text-purple-500 cursor-pointer"
                 onClick={() => setIsSignUp(false)}
               >
                 Sign In
@@ -139,7 +139,7 @@ function SignInUp() {
             <p className='text-black'>
               Don't have an account?{' '}
               <span
-                className="text-purpel-500 cursor-pointer"
+                className="text-purple-500 cursor-pointer"
                 onClick={() => setIsSignUp(true)}
               >
                 Sign Up

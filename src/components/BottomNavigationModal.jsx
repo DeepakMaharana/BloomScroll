@@ -18,7 +18,7 @@ const BottomNavigationModal = () => {
         <SignInUp/>
       </Dialog>
       {/* Fixed button at the bottom */}
-      <div className="fixed bottom-20 right-10 z-10">
+      <div className="fixed bottom-20 right-10 z-20">
         <button
           onClick={toggleModal}
           className={` ${isOpen?'text-[#8A6FD5] bg-white hover:bg-white':"text-white  bg-[#8A6FD5] hover:bg-[#7853df]"} p-3 rounded-full shadow-lg focus:outline-none`}

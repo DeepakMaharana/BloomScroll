@@ -60,7 +60,7 @@ const SplashScreen = () => {
       {
         delay: 0.5,
         opacity: 0.8,
-        duration: 1,
+        duration: 0.5,
         stagger: 0.2,
         ease: "power1.inOut",
       }

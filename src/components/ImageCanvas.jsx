@@ -165,27 +165,13 @@ const ImageCanvas = () => {
     })
 
     .to(index, {
-      value: 800,
-      duration: 40,
+      value: 1000,
+      duration: 60,
       ease: "linear",
       onUpdate: () => {
         render(Math.round(index.value));
       },
     },"third")
-    .from(".parent canvas_div", {
-      xPercent:0,
-      duration:30,
-      ease:"linear"
-    }, "third")
-
-    .to(index, {
-      value: 1000,
-      duration: 40,
-      ease: "linear",
-      onUpdate: () => {
-        render(Math.round(index.value));
-      },
-    },"fourth")
     .to(".parent", {
       scale: 0.8,
       duration: 40,
@@ -193,7 +179,12 @@ const ImageCanvas = () => {
       onUpdate: () => {
         render(Math.round(index.value));
       },
-    },"fourth")
+    },"third")
+    .to(".parent .canvas_div", {
+      xPercent:0,
+      duration:40,
+      ease:"power2.inOut"
+    }, "third")
 
     .to(index, {
       value: 1200,
@@ -202,7 +193,7 @@ const ImageCanvas = () => {
       onUpdate: () => {
         render(Math.round(index.value));
       },
-    },"fifth")
+    },"fourth")
 
   });
 
@@ -220,10 +211,10 @@ const ImageCanvas = () => {
         ></canvas>
       </div>
 
-      <div className="container mx-auto h-full px-4 absolute top-0 flex flex-col justify-center drop-shadow-xl filter backdrop-blur-sm lg:backdrop-blur-none heading_container">
-        <h1 className="text-center text-6xl lg:text-8xl lg:text-left font-bold my-4 text-purple-400">
+      <div className="container mx-auto h-full px-4 absolute top-0 flex flex-col justify-center drop-shadow-xl filter backdrop-blur-sm lg:backdrop-blur-none heading_container" style={{backdropFilter:"blur(2px)"}}>
+        <h1 className="text-center text-6xl lg:text-8xl lg:text-left font-bold my-4 text-purple-500">
           {
-            "Bloomscroll".split("").map((letter, index) => (
+            "Bloom Scroll".split("").map((letter, index) => (
             <span key={index} className="heading_letter">
               {letter}
             </span>

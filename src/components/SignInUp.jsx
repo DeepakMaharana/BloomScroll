@@ -43,8 +43,6 @@ function SignInUp() {
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
     } else {
-      // Handle successful submission (e.g., API call, redirect)
-      console.log('Form submitted successfully!');
       // Clear form data
       setFormData({ email: '', password: '', confirmPassword: '' });
       // Reset errors

@@ -29,7 +29,6 @@ const ImageCanvas = () => {
 
   const render = useCallback(
     (index) => {
-      console.log("Rendering frame:", index);
       if (images[index]) {
         // canvasRef.current?.getContext("2d")?.drawImage(images[index], 0, 0);
 
@@ -78,7 +77,6 @@ const ImageCanvas = () => {
         end: "bottom top",
         scrub: 1,
         onComplete: (self) => {
-          console.log("Timeline completed");
           self.kill(); // Removes the ScrollTrigger instance and its markers
         },
       },

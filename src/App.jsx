@@ -20,8 +20,7 @@ function App() {
         scroller: ".content",
         start: "40% center",
         end: "bottom center",
-        scrub: 1,
-        markers:true
+        scrub: 1
       },
     })
     .to(".second_textDiv",{
@@ -29,7 +28,6 @@ function App() {
       opacity:1,
       duration:40
     })
-    console.log("App Render");
   }, []);
   return (
     <>

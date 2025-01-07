@@ -21,8 +21,8 @@ function App() {
       scrollTrigger: {
         trigger: ".second_textDiv",
         scroller: ".content",
-        start: "top 40%",
-        end: "50% 40%",
+        start: "40% 40%",
+        end: "bottom 40%",
         scrub: 1,
       },
     })

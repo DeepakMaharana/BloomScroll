@@ -71,7 +71,9 @@ body {
   /* padding: 2rem; */
   backdrop-filter: blur(20px);
   height: 100%;
-  overflow: auto;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .sphere {

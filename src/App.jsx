@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import SplashScreen from "./pages/SplashScreen";
 import Navbar from "./components/Navbar";
 import ImageCanvas from "./components/ImageCanvas";
@@ -11,68 +11,36 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
 function App() {
 
-  useEffect(() => {
-    const tl = gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".second_textDiv",
-          scroller: ".content",
-          start: "40% center",
-          end: "bottom center",
-          scrub: 1,
-        },
-      })
-      .to(".second_textDiv", {
-        backdropFilter: "blur(5px)",
-        opacity: 1,
-        duration: 40,
-      });
-  }, []);
   return (
-    <>
-      <PrimeReactProvider>
-          <SplashScreen />
-          <div className="wrapper">
-            <Navbar />
-            <BottomNavigationModal />
+    <PrimeReactProvider>
+      <div className="min-h-screen relative">
+        <SplashScreen />
+        <div className="wrapper relative overflow-x-hidden">
+          <Navbar />
+          <BottomNavigationModal />
 
-            <div className="sphere"></div>
-            <div className="sphere"></div>
-            <div className="sphere"></div>
+          {/* Responsive spheres */}
+          <div className="sphere hidden md:block"></div>
+          <div className="sphere hidden md:block"></div>
+          <div className="sphere hidden md:block"></div>
 
-            <div className="content">
-              <section className="page h-full">
-                <ImageCanvas />
-              </section>
-              <section className="page h-full second_textDiv opacity-0">
-                <div className="container w-[70%] flex flex-col items-center justify-center backdrop-blur-sm">
-                  <h1 className="font-bold text-6xl text-center ">
-                    A Platform That Grows With You
-                  </h1>
-                  <p className="font-bold text-xl text-center w-[80%] ">
-                    At Bloom, we believe technology should empower you to
-                    connect deeply, create boldly, and grow authentically. Gone
-                    are the days of shallow scrolling and empty interactions.
-                    Here, every moment is an opportunity to spark inspiration,
-                    nurture your emotions, and forge real-world connections that
-                    matter. Bloom is more than a platform—it’s your partner in
-                    unlocking a more meaningful, flourishing life
-                  </p>
-                </div>
-              </section>
+          <div className="content relative">
+            <section className="page canvas_page min-h-screen w-full bg-black">
+              <ImageCanvas />
+            </section>
 
-              <section className="page h-full">
-                <TransformationalFeatures />
-              </section>
+            <section className="page min-h-screen w-full">
+              <TransformationalFeatures />
+            </section>
 
-              <Footer />
-              {/* </ReactLenis> */}
-            </div>
+            <Footer />
           </div>
-      </PrimeReactProvider>
-    </>
+        </div>
+      </div>
+    </PrimeReactProvider>
   );
 }
 

@@ -201,7 +201,7 @@ const SplashScreen = () => {
 
       <h2
         ref={brandRef}
-        className="splash_brand_name ml-4 mt-4 uppercase text-purple-300 tracking-widest font-bold text-3xl"
+        className="splash_brand_name ml-4 mt-4 uppercase text-purple-300 tracking-widest font-bold text-center text-xl  lg:text-3xl"
       >
         {
           "SOLUTION FOR MEANINGFUL FUTURE".split("").map((letter, index) => (
